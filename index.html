@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Zim Lotto</h1>
+    </header>
+    
+    <main>
+        <p>Select your lucky numbers and win big!</p>
+        <a href="play.html" class="btn">Play Now</a>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const user = localStorage.getItem("user");
+                if (!user) {
+                    alert("You must log in first!");
+                    window.location.href = "login.html";
+                }
+            });
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Zim Lotto</p>
+    </footer>
+</body>
+</html>
+

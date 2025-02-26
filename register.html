@@ -1,42 +1,53 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
     <header>
-        <h1>Lottery System - Register</h1>
+        <h1>Play Lottery</h1>
+        <p id="user-balance"></p> <!-- Balance will be displayed here -->
     </header>
+    <script src="balance.js"></script> <!-- Link the balance script -->
+    
 
     <main>
-        <form id="register-form">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" required>
-
-            <label for="dob">D.O.B:</label>
-            <input type="date" id="dob" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" required>
-
-            <button type="submit" class="btn">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <div class="register-container">
+            <form id="register-form">
+                <div class="form-field">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="dob">D.O.B:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-field">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
     </main>
 
     <footer>
-        <p></p>
+        <p>&copy; 2025 Zim Lotto. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+

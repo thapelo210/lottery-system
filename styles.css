@@ -1,151 +1,250 @@
-/* Global Styles */
+/* General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/w2.png'); /* Set your background image here */
-    background-size: cover; /* Ensure the background image covers the entire page */
-    background-position: center center; /* Center the image */
-    background-attachment: fixed; /* Keep the background fixed when scrolling */
-    filter: blur(4px); /* Apply the blur effect */
-    z-index: -1; /* Ensure it's behind the content */
-}
-
-/* Header */
+/* Header Styling */
 header {
-    background-color: rgba(76, 137, 175, 0.8); /* Semi-transparent green background for header */
+    background: #00796b;
     color: white;
-    padding: 20px;
-    font-size: 1.8em;
-    border-bottom: 3px solid #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Main Content */
+/* Main Content Styling */
 main {
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    flex-grow: 1; /* Allows main content to grow and push footer down */
 }
 
-/* Buttons */
+/* Game Container Styling */
+.game-container {
+    display: flex;
+    justify-content: center; /* Center the options */
+    gap: 20px; /* Space between options */
+    margin-top: 20px;
+}
+
+/* Game Card Styling */
+.game-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    height: 300px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space elements evenly */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Game Thumbnail */
+.game-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+/* Timer Styling */
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; /* Red text only */
+    margin: 10px auto;
+}
+
+/* Form and Inputs Styling */
+#lottery-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 10px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
 .btn {
-    display: inline-block;
-    background-color: rgba(76, 137, 175, 0.8); /* Soft coral button color */
+    background: #00796b;
     color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 8px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline from buttons */
 }
 
 .btn:hover {
-    background-color: #ff4f42; /* Darker coral on hover */
+    background: #00574b;
 }
 
-/* Style for the "Generate Winning Numbers" button */
-#draw-btn {
-    margin-top: 25px;
-    background-color:rgba(76, 137, 175, 0.8); /* Green for winning numbers button */
+/* Receipt Popup */
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#draw-btn:hover {
-    background-color: rgba(76, 137, 175, 0.8); /* Slightly darker green on hover */
-}
-
-/* Lottery Input Fields */
-.numbers input {
-    width: 55px;
-    padding: 8px;
-    margin: 8px;
-    text-align: center;
-    font-size: 1.1em;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-    transition: border-color 0.3s ease;
-}
-
-.numbers input:focus {
-    border-color:rgba(76, 137, 175, 0.8); /* Green focus state */
-}
-
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color:rgba(76, 137, 175, 0.8);
+/* Header Styling */
+header {
+    background: #00796b;
     color: white;
-    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Form Styles */
-form {
-    width: 320px;
-    margin: auto;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.85); /* White background with slight transparency */
+/* Main Content Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Game Container Styling */
+.game-container {
+    display: flex;
+    justify-content: center; /* Center the options */
+    gap: 20px; /* Space between options */
+    margin-top: 20px;
+}
+
+/* Game Card Styling */
+.game-card {
+    background: white;
     border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-form:hover {
-    transform: scale(1.02);
-}
-
-/* Input Fields and Buttons in Forms */
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1.1em;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color:rgba(76, 137, 175, 0.8);
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-/* Result Box */
-#result {
-    font-size: 1.2em;
-    margin-top: 25px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.date {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
     text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    height: 300px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space elements evenly */
+}
+
+/* Game Thumbnail */
+.game-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+/* Timer Styling */
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; /* Red text only */
+    margin: 10px auto;
+}
+
+/* Form and Inputs Styling */
+#lottery-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="number"],
+input[type="text"] { /* Assuming text inputs for login */
+    width: 200px; /* Make width consistent */
+    padding: 10px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between fields */
+}
+
+.btn {
+    background: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline from Play Now button */
+}
+
+.btn:hover {
+    background: #00574b;
+}
+
+/* Receipt Popup */
+#receipt-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.close-btn {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Receipts Page Styling */
+#receipts-list {
+    margin: 20px;
+}
+
+.receipt {
+    background: #e0f7fa;
+    border: 1px solid #00796b;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background: #00796b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Keep footer at the bottom */
 }

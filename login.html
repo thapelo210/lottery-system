@@ -1,34 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <header>
-        <h1>Lottery System - Login</h1>
+        <h1>Play Lottery</h1>
+        <p id="user-balance"></p> <!-- Balance will be displayed here -->
     </header>
-
+    <script src="balance.js"></script> <!-- Link the balance script -->
+    
+    
     <main>
-        <form id="login-form">
-            <label for="login-email">Email:</label>
-            <input type="email" id="login-email" required>
-
-            <label for="login-password">Password:</label>
-            <input type="password" id="login-password" required>
-
-            <button type="submit" class="btn">Login</button>
-        </form>
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
+        <div class="login-container">
+            <form id="login-form">
+                <div class="form-field">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
     </main>
 
     <footer>
-        <p></p>
+        <p>&copy; 2025 Zim Lotto. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-

@@ -3,34 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Lottery</title>
+    <title>Play Zim Lotto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Pick Your Lottery Numbers</h1>
+        <h1>Play Lottery</h1>
+        <p id="user-balance"></p> <!-- Balance will be displayed here -->
     </header>
-
+    <script src="balance.js"></script> <!-- Link the balance script -->
+    
     <main>
+        <div id="timer">30</div> <!-- Timer Display -->
+        <p>Winning numbers will be drawn every 30 seconds.</p>
+        
         <form id="lottery-form">
-            <label>Select 6 Numbers (1-49):</label>
             <div class="numbers">
-                <input type="number" min="1" max="49" required>
-                <input type="number" min="1" max="49" required>
-                <input type="number" min="1" max="49" required>
-                <input type="number" min="1" max="49" required>
-                <input type="number" min="1" max="49" required>
-                <input type="number" min="1" max="49" required>
+                <input type="number" min="1" max="49" placeholder="" required>
+                <input type="number" min="1" max="49" placeholder="" required>
+                <input type="number" min="1" max="49" placeholder="" required>
+                <input type="number" min="1" max="49" placeholder="" required>
+                <input type="number" min="1" max="49" placeholder="" required>
+                <input type="number" min="1" max="49" placeholder="" required>
             </div>
-            <button type="submit" class="btn">Buy Ticket</button>
-            
-            <button id="draw-btn" class="btn">Generate Winning Numbers</button>
-        <p id="result"></p>
+            <button type="submit" class="btn">Submit Ticket</button>
         </form>
+
+        <h2>Winning Numbers:</h2>
+        <div id="winning-numbers" class="lottery-balls"></div>
+        <p id="countdown">Next draw in: 30s</p>
     </main>
 
+    <!-- Receipt Popup -->
+    <div id="receipt-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h2>Receipt</h2>
+            <div id="receipt-details"></div>
+        </div>
+    </div>
+
     <footer>
-        <p></p>
+        <p>&copy; 2025 Zim Lotto. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

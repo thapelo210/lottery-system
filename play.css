@@ -1,0 +1,97 @@
+/* General Styling */  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Header Styling */
+header {
+    background: #00796b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    flex-grow: 1; /* Allows main content to grow and push footer down */
+}
+
+/* Lottery Form Styling */
+#lottery-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form and Inputs Styling */
+.form-field {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 200px; /* Make width consistent */
+    padding: 10px;
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn {
+    background: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* Remove underline from buttons */
+}
+
+.btn:hover {
+    background: #00574b;
+}
+
+/* Timer Styling */
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; /* Red text only */
+    margin: 10px auto;
+}
+
+/* Winning Numbers Styling */
+#winning-numbers {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background: #00796b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Keep footer at the bottom */
+}

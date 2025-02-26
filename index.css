@@ -1,0 +1,82 @@
+/* General Styling */  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Header Styling */
+header {
+    background: #00796b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    flex-grow: 1; /* Allows main content to grow and push footer down */
+}
+
+/* Game Options Styling */
+.game-container {
+    display: flex;
+    justify-content: center; /* Center the options */
+    gap: 20px; /* Space between options */
+    margin-top: 20px;
+}
+
+/* Game Card Styling */
+.game-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Fixed width for consistency */
+    height: 300px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space elements evenly */
+    transition: transform 0.3s; /* Add transition for hover effect */
+}
+
+.game-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Game Thumbnail */
+.game-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+/* Timer Styling */
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000; /* Red text only */
+    margin: 10px auto;
+}
+
+/* Footer Styling */
+footer {
+    background: #00796b;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Keep footer at the bottom */
+}

@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lottery System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Zim Lotto</h1>
+        <h1>Zim Lotto</h1>
+        <p id="user-balance"></p> <!-- Balance will be displayed here -->
     </header>
+    <script src="balance.js"></script> <!-- Link the balance script -->
+    
     
     <main>
-        <p>Select your lucky numbers and win big!</p>
-        <a href="play.html" class="btn">Play Now</a>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const user = localStorage.getItem("user");
-                if (!user) {
-                    alert("You must log in first!");
-                    window.location.href = "login.html";
-                }
-            });
-        </script>
+        <p>Pick a game and Win Big!!!</p>
+        <div class="game-container">
+            <div class="game-card">
+                <img src="images/lottoballs.jpg" alt="Lottery Game" class="game-thumbnail">
+                <h3>Lottery Game</h3>
+                <p>Try your luck in the lottery and see if you win big!</p>
+                <a href="play.html" class="btn">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="images/scratch 2.jpg" alt="Scratch Card" class="game-thumbnail">
+                <h3>Scratch Card</h3>
+                <p>Scratch and see if you win!!!</p>
+                <a href="game2.html" class="btn">Play Now</a>
+            </div>
+            <div class="game-card">
+                <img src="images/roulette.jpg" alt="Roulette" class="game-thumbnail">
+                <h3>Roulette</h3>
+                <p>Become a roulette master!!!</p>
+                <a href="game3.html" class="btn">Play Now</a>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Zim Lotto</p>
+        <p>&copy; 2025 Zim Lotto. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
